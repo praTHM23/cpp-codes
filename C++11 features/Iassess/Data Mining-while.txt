@@ -1,0 +1,22 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int oddDigi=0;
+	int eveDigi=0;
+	int x;
+	cin>>x;
+	while(x!=0)
+	{
+		int rem=x%10;
+		if(rem%2==0)eveDigi+=rem;
+		else oddDigi+=rem;
+		x=x/10;
+
+	}
+	if(oddDigi==eveDigi) cout<<"yes";
+	else cout<<"no";
+	
+	return 0;
+}
