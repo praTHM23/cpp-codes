@@ -1,0 +1,46 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	char ch;
+	cin>>ch;
+
+	switch(ch)
+	{
+		case 'e':
+			cout<<"Early Bird Ticket\n";
+			break;
+		case 'E':
+			cout<<"Early Bird Ticket\n";
+			break;
+		case 'd':
+			cout<<"Discount Ticket\n";
+			break;
+		case 'D':
+			cout<<"Discount Ticket\n";
+			break;
+		case 'v':
+			cout<<"VIP Ticket\n";
+			break;
+		case 'V':
+			cout<<"VIP Ticket\n";
+			break;
+		case 'S':
+			cout<<"Standard Ticket\n";
+			break;
+		case 's':
+			cout<<"Standard Ticket\n";
+			break;
+		case 'C':
+			cout<<"Child Ticket\n";
+			break;
+		case 'c':
+			cout<<"Child Ticket\n";
+			break;
+		default:
+			cout<<"Invalid Tickets\n";
+	}
+	
+	
+	return 0;
+}

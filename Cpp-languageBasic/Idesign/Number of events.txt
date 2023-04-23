@@ -1,0 +1,12 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int x;
+	cout<<"Enter the number of events hosted in Codissia"<<endl;
+	cin>>x;
+	cout<<"Number of events hosted in Codissia is "<<x<<endl;
+	
+	return 0;
+}

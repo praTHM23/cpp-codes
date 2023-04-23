@@ -1,0 +1,19 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int x,y;
+	cout<<"Enter the value of X"<<endl;
+	cin>>x;
+	cout<<"Enter the value of Y"<<endl;
+	cin>>y;
+	int ch,ad,se;
+	ch=(y-5*x)/13;
+	ad=ch+x;
+	se=2*ch;
+	cout<<"Number of children tickets sold : "<<ch<<endl;
+	cout<<"Number of adult tickets sold : "<<ad<<endl;
+	cout<<"Number of senior tickets sold : "<<se<<endl;
+	return 0;
+}

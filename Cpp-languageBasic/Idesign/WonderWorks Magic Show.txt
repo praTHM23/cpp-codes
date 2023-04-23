@@ -1,0 +1,35 @@
+using namespace std;
+#include<iostream>
+#include <iomanip>
+struct infor
+{
+int num;
+float avgRate;
+};
+int main()
+{
+
+	struct infor info[3];
+	for(int i=0;i<3;i++)
+	{
+		cout<<"Enter the number of people who watched show "<<i+1<<endl;
+		cin>>info[i].num;
+		cout<<"Enter the average rating for show "<<i+1<<endl;
+		cin>>info[i].avgRate;
+	}
+	float sum=0.0;
+	int tot=0;
+	for(int i=0;i<3;i++)
+	{
+		sum+=(info[i].num*info[i].avgRate);
+		tot+=info[i].num;
+	}
+	// cout<<sum<<endl;
+	// cout<<tot<<endl;
+	float ans=sum/tot;
+	// cout<<setprecision(3);
+	// cout<<"The overall average rating for the show is "<<ans<<endl;
+	printf("The overall average rating for the show is %.2f\n",ans);
+	
+	return 0;
+}

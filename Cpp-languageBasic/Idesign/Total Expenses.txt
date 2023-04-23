@@ -1,0 +1,53 @@
+using namespace std;
+#include<iostream>
+#include<iomanip>
+int main()
+{
+	int X;
+	cin>>X;
+
+	int no;
+	cin>>no;
+
+	float cost=(no*1.0)*X;
+
+	// cout<<setprecision(3)<<endl;
+	if(no<50)
+	{
+		// cout<<cost<<endl;
+		printf("%.2f\n",cost);
+	}
+	else if(no>=50 && no <= 100)
+	{
+		float finalAns=cost-cost*0.1;
+		// cout<<finalAns<<endl;
+		printf("%.2f\n",finalAns);
+	}
+	else if(no>=101 && no <= 200)
+	{
+		float finalAns=cost-cost*0.2;
+		// cout<<finalAns<<endl;
+		printf("%.2f\n",finalAns);
+	}
+	else if(no>=201 && no <= 400)
+	{
+		float finalAns=cost-cost*0.3;
+		// cout<<finalAns<<endl;
+		printf("%.2f\n",finalAns);
+	}
+	else if(no>=401 && no <= 500)
+	{
+		float finalAns=cost-cost*0.4;
+		// cout<<finalAns<<endl;
+		printf("%.2f\n",finalAns);
+	}
+	else
+	{
+			float finalAns=cost-cost*0.5;
+			// cout<<finalAns<<endl;
+			printf("%.2f\n",finalAns);
+	}
+	
+	
+	return 0;
+}

@@ -1,0 +1,27 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int angle1,angle2,angle3;
+	cin>>angle1>>angle2>>angle3;
+
+	if((angle1+angle2+ angle3)!=180)
+	{
+		printf("No Prize\n");
+	}
+	else if(angle1==angle2 && angle2==angle3)
+	{
+		printf("Prize 3\n");
+	}
+	else if(angle1==90 || angle2 == 90 || angle3==90)
+	{
+		printf("Prize 2\n");
+	}
+	else
+	{
+		printf("Prize 1\n");
+	}
+	
+	return 0;
+}

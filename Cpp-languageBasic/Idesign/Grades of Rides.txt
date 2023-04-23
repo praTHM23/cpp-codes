@@ -1,0 +1,36 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int a,b,c;
+	cin>>a>>b>>c;
+
+
+	if(a>50 && b>60 && c>100)
+	{
+		printf("10\n");
+	}
+	else if(a>50 && b>60 && c<=100)
+	{
+		printf("9\n");
+	}
+	else if(a<=50 && b>60 && c>100)
+	{
+		printf("8\n");
+	}
+	else if(a>50 && b<=60 && c>100)
+	{
+		printf("7\n");
+	}
+	else if(a>50 || b>60 || c>100)
+	{
+		printf("6\n");
+	}
+	else
+	{
+		printf("5\n");
+	}
+	
+	return 0;
+}

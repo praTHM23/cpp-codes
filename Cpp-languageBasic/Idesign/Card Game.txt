@@ -1,0 +1,25 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int c1n1,c2n2,c3n3;
+	char c1,c2,c3;
+
+	cin>>c1>>c1n1>>c2>>c2n2>>c3>>c3n3;
+
+	if((c1==c2 && c2==c3) && (c1n1==c2n2 && c2n2==c3n3))
+	{
+		printf("Double Bonanza\n");
+	}
+	else if((c1==c2 && c2==c3) || (c1n1==c2n2 && c2n2==c3n3))
+	{ 
+		printf("Bonanza\n");
+	}
+	else
+	{
+		printf("No Bonanza\n");
+	}
+	
+	return 0;
+}

@@ -1,0 +1,19 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int age;
+	cin>>age;
+
+	if(age < 15)
+	{
+		printf("Welcome to the show\n");
+		printf("Please note that you should be accompanied by an adult\n");
+	}
+	else
+	{
+		printf("Welcome to the show\n");
+	}
+	
+	return 0;
+}

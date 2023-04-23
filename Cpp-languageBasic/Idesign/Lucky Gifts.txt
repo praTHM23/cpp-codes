@@ -1,0 +1,29 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int n;
+	cin>>n;
+
+	int mxLeftOver=0;
+	int packSize=n;
+	for(int i=2;i<=n;i++)
+	{
+		int t=n;
+		while(t>=i)
+		{
+			t=t-i;
+		}
+		int rem=t;
+		if(rem > mxLeftOver)
+		{
+			mxLeftOver=rem;
+			packSize=i;
+		} 
+	}
+	cout<<packSize<<endl;
+	
+	
+	return 0;
+}

@@ -1,0 +1,19 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int age;
+	cin>>age;
+
+	if(age>60 || age<15)
+	{
+		printf("Not Allowed\n");
+	}
+	else
+	{
+		printf("Allowed");
+	}
+	
+	
+	return 0;
+}

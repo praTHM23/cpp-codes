@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	
+	cout<<"Enter the total number of people"<<endl;
+	int x;
+	cin>>x;
+	int a1=(x*2)/7;
+	int a2=2*a1;
+	int a3=a1/2;
+
+	cout<<"Number of attendees on day 1 : "<<a1<<endl;
+	cout<<"Number of attendees on day 2 : "<<a2<<endl;
+	cout<<"Number of attendees on day 3 : "<<a3<<endl;
+	
+	return 0;
+}

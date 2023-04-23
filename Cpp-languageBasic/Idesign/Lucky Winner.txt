@@ -1,0 +1,23 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int no;
+	cin>>no;
+
+	int lastDigit=no%10;
+
+	if(lastDigit==3 || lastDigit==8)
+	{
+		cout<<"Lucky Winner\n"<<endl;
+	}
+	else
+	{
+		cout<<"Not a Lucky Winner\n"<<endl;
+	}
+
+	
+	
+	
+	return 0;
+}

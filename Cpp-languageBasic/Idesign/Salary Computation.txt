@@ -1,0 +1,23 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int basicSal;
+	cin>>basicSal;
+
+	if(basicSal >= 15000)
+	{
+		float grossSal=basicSal+(5000+basicSal*0.98)*1.0;
+		printf("%.2f",grossSal);
+	}
+	else
+	{
+			float grossSal=basicSal+(basicSal*0.15+basicSal*0.9)*1.0;
+			// cout<<grossSal<<endl;
+			printf("%.2f",grossSal);
+	}
+
+	
+	
+	return 0;
+}
