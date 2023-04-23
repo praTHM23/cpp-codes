@@ -1,0 +1,34 @@
+using namespace std;
+#include<iostream>
+#include<cmath>
+int countDivisors(int n)
+{
+	int cn=0;
+    for (int i=1; i<=sqrt(n); i++)
+    {
+        if (n%i == 0)
+        {
+            if (n/i == i)
+                cn++;
+  
+            else
+               cn+=2;
+        }
+    }
+	return cn;
+}
+
+int main()
+{
+	
+	int a,b;
+	cin>>a>>b;
+	int res=0;
+	for(int i=a;i<=b;i++)
+	{
+		int ans=countDivisors(i);
+		if(ans==4) res++;
+	}
+	cout<<res<<endl;
+	return 0;
+}

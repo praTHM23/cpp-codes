@@ -1,0 +1,17 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int a,b;
+	cin>>a>>b;
+
+	int start=a;
+	while(start<=b)
+	{
+		cout<<"All positions change in year "<<start<<endl;
+		start+=60;
+	}
+	
+	
+	return 0;
+}

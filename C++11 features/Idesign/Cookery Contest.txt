@@ -1,0 +1,40 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int N;
+	cin>>N;
+
+	int arr[N];
+	int small=-1;
+	for(int i=0;i<N;i++)
+	{
+		cin>>arr[i];
+		if(small==-1) small=arr[i];
+		if(small > arr[i]) small=arr[i];
+	}
+	
+	bool isDivi=true;
+	for(int i=0;i<N;i++)
+	{
+		if(arr[i]%small!=0) 
+		{
+			isDivi=false;
+			break;
+		}
+
+	}
+	if(isDivi==false)
+	{
+		for(int i=0;i<N;i++) cout<<arr[i]<<" ";
+	}
+	else
+	{
+		for(int i=0;i<N;i++)
+		{
+			arr[i]=arr[i]/small;
+			cout<<arr[i]<<" ";
+		} 
+	}
+	return 0;
+}

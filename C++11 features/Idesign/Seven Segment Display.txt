@@ -1,0 +1,22 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int cn=0;
+	int x;
+	cin>>x;
+	if(x>=0 && x<=9)
+	{
+		cout<<"1"<<endl;
+		return 0;
+	}
+	while(x!=0)
+	{
+		x=x/10;
+		cn++;
+	}
+	
+	cout<<cn<<endl;
+	
+	return 0;
+}

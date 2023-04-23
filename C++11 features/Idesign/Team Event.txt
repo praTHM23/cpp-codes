@@ -1,0 +1,32 @@
+using namespace std;
+#include<iostream>
+#include <cstdlib>
+int main()
+{
+	
+	int firstDigi=-1;
+	int lastDigi=-1;
+	int x;
+	cin>>x;
+	while(x!=0)
+	{
+		int rem=x%10;
+		x=x/10;
+		if(lastDigi==-1)
+		{
+			lastDigi=rem;
+		}
+		if(lastDigi!=-1 && x >0 && x<=9)
+		{
+			firstDigi=x;
+		}
+	}
+	if(firstDigi==-1 || lastDigi==-1)
+	{
+		cout<<"Invalid Input"<<endl;
+		return 0;
+	}
+	int regis=abs(firstDigi-lastDigi);
+	cout<<regis<<endl;
+	return 0;
+}

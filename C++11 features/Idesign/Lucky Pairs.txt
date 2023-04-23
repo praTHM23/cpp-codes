@@ -1,0 +1,27 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	int A,B,N;
+
+	bool isTurnA=true;
+	cin>>A>>B>>N;
+	while(N--)
+	{
+		if(isTurnA)
+		{
+			A=A*2;
+			isTurnA=false;
+		}
+		else
+		{
+			B=B*2;
+			isTurnA=true;
+		}
+	}
+
+	cout<<(A+B)<<endl;
+	
+	
+	return 0;
+}

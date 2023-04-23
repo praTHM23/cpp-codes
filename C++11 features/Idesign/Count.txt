@@ -1,0 +1,25 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int N;
+	cin>>N;
+	int evGrp=0;
+	int odGrp=0;
+	while(N--)
+	{
+		int x;
+		cin>>x;
+		if(x%2==0)
+		{
+			evGrp++;
+		}
+		else
+		{
+			odGrp++;
+		}
+	}
+	cout<<evGrp<<" "<<odGrp<<endl;
+	return 0;
+}

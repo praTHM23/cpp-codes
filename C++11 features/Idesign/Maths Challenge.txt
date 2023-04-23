@@ -1,0 +1,23 @@
+using namespace std;
+#include<iostream>
+int chk(int x,int i)
+{
+	if(x%i!=0) return i-1;
+
+	return chk(x+1,i+1);
+}
+int main()
+{
+	int k,N;
+	cin>>k>>N;
+	int cn=0;
+	for(int i=2;i<=N;i++)
+	{
+		int ans=chk(i,1);
+		if(ans==k)
+			cn++;
+	}
+	cout<<cn<<endl;
+	
+	return 0;
+}

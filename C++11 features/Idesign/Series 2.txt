@@ -1,0 +1,19 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int n;
+	cin>>n;
+
+	int x=20;
+	int add=40;
+	while(n--)
+	{
+		cout<<x<<" ";
+		x+=add;
+		add+=4;
+	}
+	
+	return 0;
+}
