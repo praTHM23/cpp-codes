@@ -1,0 +1,58 @@
+using namespace std;
+#include<iostream>
+#include<cctype>
+int main()
+{
+	string tick;
+	cin>>tick;
+
+	char ch1=tolower(tick[0]);
+	char ch2=tolower(tick[1]);
+	if(ch1==ch2)
+	{
+		cout<<"No"<<endl;
+		return 0;
+	}
+	bool win=true;
+	for(int i=0;i<tick.length()-1;i++)
+	{
+		if(tick[i]!=tick[i+1])
+		{
+			char ch3=tick[i];
+			char ch4=tick[i+1];
+			
+			ch3=tolower(ch3);
+			ch4=tolower(ch4);
+
+			if(ch3 != ch1 && ch3 != ch2)
+			{
+				// cout<<"y"<<endl;
+				win=false;
+				break;
+			}
+			if(ch4 != ch1 && ch4 !=ch2)
+			{
+				// cout<<"n"<<endl;
+				win=false;
+				break;
+			}
+			if(ch3==ch4)
+			{
+				// cout<<"x"<<endl;
+				win=false;
+				break;
+			}
+		}
+		else
+		{
+			// cout<<"z"<<endl;
+			win=false;
+			break;
+		}
+	}
+	if(win)
+		cout<<"Yes"<<endl;
+	else
+		cout<<"No"<<endl;
+	return 0;
+}

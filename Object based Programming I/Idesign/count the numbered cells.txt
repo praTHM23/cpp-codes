@@ -1,0 +1,25 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int x;
+	cin>>x;
+	int mat[x][x];
+
+	int cn=0;
+	for(int i=0;i<x;i++)
+	{
+		for(int j=0;j<x;j++)
+		{
+			cin>>mat[i][j];
+			if(mat[i][j]!=20) cn++;
+			// cout<<mat[i][j]<<" ";
+		}
+		// cout<<endl;
+	}
+	cout<<cn<<endl;
+
+	
+	return 0;
+}

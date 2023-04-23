@@ -1,0 +1,44 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int x;
+	cin>>x;
+
+	int arrA[x];
+	int arrB[x];
+
+	for(int i=0;i<x;i++)
+	{
+		cin>>arrA[i];
+	}
+	for(int i=0;i<x;i++)
+	{
+		cin>>arrB[i];
+	}
+
+	int start=0;
+	int end=0;
+	int cn=0;
+	for(int i=0;i<x;i++)
+	{
+		if(i==0)
+		{
+			end=arrA[0];
+			int diff=end-start;
+			if(diff >= arrB[0]) cn++;
+		}
+		else
+		{
+			start=arrA[i-1];
+			end=arrA[i];
+			int diff=end-start;
+			if(diff >= arrB[i]) cn++;
+		}
+	}
+	cout<<cn<<endl;
+		
+	
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int findType (int x)
+{
+    //type your code here
+    int cn=2;
+    int i=2;
+    while(i<x)
+    {
+        if(x%i==0)
+            cn++;
+        i++;
+    }
+    if(cn==4) return 1;
+    return 0;
+}
+
+int main()
+{
+    //type your code here
+    int x;
+    cin>>x;
+    int ans=findType(x);
+    if(ans==1)
+        cout<<"Nice"<<endl;
+    else
+        cout<<"Not Nice"<<endl;
+    return 0;
+}

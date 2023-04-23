@@ -1,0 +1,27 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	string match;
+	cin>>match;
+
+	int A=0,B=0;
+	// bool matchWinSide=true;
+	for(int i=0;i<match.length();i++)
+	{
+		if(match[i]=='1') 
+		{
+			A++;
+		}
+		else
+		{
+			B++;
+		}
+	}
+	if(A>B)  cout<<"Win"<<endl;
+	else cout<<"Lose"<<endl;
+	// if(matchWinSide)  cout<<"Win"<<endl;
+	// else cout<<"Lose"<<endl;
+	return 0;
+}

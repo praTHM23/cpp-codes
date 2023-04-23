@@ -1,0 +1,39 @@
+using namespace std;
+#include<iostream>
+int main()
+{
+	
+	int x;
+	cin>>x;
+
+	int arrL[x];
+	int arrR[x];
+
+	for(int i=0;i<x;i++)
+		cin>>arrL[i];
+	for(int i=0;i<x;i++)
+		cin>>arrR[i];
+
+	int mult=0;
+	int ans=-1;
+	for(int i=x-1;i>=0;i--)
+	{
+		int curr=arrL[i]*arrR[i];
+		if(curr > mult)
+		{
+			mult=curr;
+			ans=i;
+		}
+		if(curr==mult)
+		{
+			if(arrR[i] > arrR[ans])
+			{
+				ans=i;
+			}
+			else if(arrR[i]==arrR[ans])
+				ans=i;
+		}
+	}
+	cout<<ans+1<<endl;
+	return 0;
+}
