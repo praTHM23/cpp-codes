@@ -1,0 +1,34 @@
+#include <iostream>
+#include <map>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    vector<pair<int, int>> houses(n);
+    map<int, int> diag1, diag2;
+
+    for (int i = 0; i < n; i++)
+    {
+        int x, y;
+        cin >> x >> y;
+        houses[i] = {x, y};
+        diag1[x - y]++;
+        diag2[x + y]++;
+    }
+
+    long long result = 0;
+    for (const auto &kv : diag1)
+    {
+        result += (long long)(kv.second) * (kv.second - 1) / 2;
+    }
+    for (const auto &kv : diag2)
+    {
+        result += (long long)(kv.second) * (kv.second - 1) / 2;
+    }
+
+    cout << result << endl;
+    return 0;
+}
