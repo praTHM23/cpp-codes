@@ -1,0 +1,129 @@
+#include<iostream>
+#include<cstdlib>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
+template<class T>
+class node
+{
+    public:
+    T data;
+    node<T> *link;
+};
+template<class T>
+class list
+{
+      private:
+      node<T> *first;
+      public:
+     list()
+     {
+         first=NULL;
+     }
+void deletion()
+{
+       // fill the code
+        if (first == NULL)
+        {
+            cout << "List is empty." << endl;
+            return;
+        }
+
+        T value;
+        cout << "Enter the element to delete :";
+        cin >> value;
+
+        if (first->data == value)
+        {
+            node<T>* temp = first;
+            first = first->link;
+            delete temp;
+            return;
+        }
+
+        node<T>* curr = first;
+        while (curr->link != NULL && curr->link->data != value)
+        {
+            curr = curr->link;
+        }
+
+        if (curr->link == NULL)
+        {
+            cout << "Element not found in the list." << endl;
+        }
+        else
+        {
+            node<T>* temp = curr->link;
+            curr->link = curr->link->link;
+            delete temp;
+        }
+
+ }
+void insertion()
+    {
+         // fill the code
+          T value;
+        cout << "Enter data Of New Node:";
+        cin >> value;
+
+        node<T>* temp = new node<T>;
+        temp->data = value;
+        temp->link = NULL;
+
+        if (first == NULL)
+        {
+            first = temp;
+        }
+        else
+        {
+            node<T>* curr = first;
+            while (curr->link != NULL)
+            {
+                curr = curr->link;
+            }
+            curr->link = temp;
+        }
+
+    }
+void display()
+{ // fill the code
+    if (first == NULL)
+        {
+            cout << "List is empty." << endl;
+            return;
+        }
+
+        node<T>* curr = first;
+        while (curr != NULL)
+        {
+            cout<< curr->data<<"   ";
+            curr = curr->link;
+        }
+}
+};
+int main()
+{
+    int n;
+    list<string>li;
+    do
+    {
+    cout<<"\n1.Insertion\n2.Deletion\n3.Print List\n4.Exit\n"<<endl;
+    cout<<"Enter your option : "<<endl;
+    cin>>n;
+    if(n==1)
+    {
+        li.insertion();
+    }
+    else if(n==2)
+    {
+        li.deletion();
+    }
+    else if(n==3)
+    {
+        li.display();
+    }
+    else if(n==4)
+    exit(0);
+    }while(n<=4);
+}
