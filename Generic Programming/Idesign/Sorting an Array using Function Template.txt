@@ -1,0 +1,61 @@
+//Main.cpp
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+template <typename T>
+void sort(T arr[], int size) {
+    sort(arr, arr + size);
+}
+
+int main() {
+    int n, choice;
+    cout << "Enter number of students in the class" << endl;
+    cin >> n;
+    cout << "Enter 1 to sort roll numbers" << endl;
+    cout << "Enter 2 to sort percentage" << endl;
+    cout << "Enter 3 to sort student names" << endl;
+    cin >> choice;
+
+    if (choice == 1) {
+        int roll[n];
+        cout << "Enter roll Numbers" << endl;
+        for (int i = 0; i < n; i++) {
+            cin >> roll[i];
+        }
+        sort(roll, n);
+        cout << "Sorted roll numbers are:" << endl;
+        for (int i = 0; i < n; i++) {
+            cout << roll[i] << endl;
+        }
+    }
+    else if (choice == 2) {
+        float percent[n];
+        cout << "Enter Marks" << endl;
+        for (int i = 0; i < n; i++) {
+            cin >> percent[i];
+        }
+        sort(percent, n);
+        cout << "Sorted marks are:" << endl;
+        for (int i = 0; i < n; i++) {
+            cout << percent[i] << endl;
+        }
+    }
+    else if (choice == 3) {
+        string name[n];
+        cout << "Enter Names" << endl;
+        for (int i = 0; i < n; i++) {
+            cin >> name[i];
+        }
+        sort(name, n);
+        cout << "Sorted Names are:" << endl;
+        for (int i = 0; i < n; i++) {
+            cout << name[i] << endl;
+        }
+    }
+    else {
+        cout << "Invalid Choice" << endl;
+    }
+    return 0;
+}
