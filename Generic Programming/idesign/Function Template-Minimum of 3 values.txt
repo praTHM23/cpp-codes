@@ -1,0 +1,42 @@
+//Main.cpp
+#include<iostream>
+using namespace std;
+template<class T>
+T minimum(T a, T b, T c) {
+    T min = a;
+    if (b < min) {
+        min = b;
+    }
+    if (c < min) {
+        min = c;
+    }
+    return min;
+}
+int main()
+{
+        //fill your code here.
+        int choice;
+        double a, b, c;
+
+    cout << "Menu\n";
+    cout << "1.Minimum of 3 integer values\n";
+    cout << "2.Minimum of 3 double values\n";
+    cout << "Enter your choice:\n";
+    cin >> choice;
+
+    switch (choice) {
+    case 1:
+        cout << "Enter three integers:\n";
+        cin >> a >> b >> c;
+        cout << "Minimum value is: " << minimum(a, b, c) << endl;
+        break;
+    case 2:
+        cout << "Enter three double values:\n";
+        cin >> a >> b >> c;
+        cout << "Minimum value is: " << minimum(a, b, c) << endl;
+        break;
+    default:
+        cout << "Invalid choice!\n";
+    }
+        return 0;
+}

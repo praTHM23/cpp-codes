@@ -1,0 +1,44 @@
+//Main.cpp
+#include <iostream>
+using namespace std;
+
+template <typename T>
+void printArray(T a[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << a[i] << endl;
+    }
+}
+
+int main() {
+    int choice, n;
+    cout << "1.Integer Array" << endl;
+    cout << "2.Double Array" << endl;
+    cout << "Enter your choice\n";
+    cin >> choice;
+    if (choice == 1) {
+        cout << "Enter the size of the integer array\n";
+        cin >> n;
+        int a[n];
+        cout << "Enter the elements of the integer array\n";
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+        cout << "The elements in the integer array are\n";
+        printArray(a, n);
+    }
+    else if (choice == 2) {
+        cout << "Enter the size of the double array\n";
+        cin >> n;
+        double a[n];
+        cout << "Enter the elements of the double array\n";
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+        cout << "The elements in the double array are\n";
+        printArray(a, n);
+    }
+    else {
+        cout << "Invalid choice" << endl;
+    }
+    return 0;
+}

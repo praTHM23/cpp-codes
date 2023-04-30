@@ -1,0 +1,54 @@
+//Main.cpp
+#include <iostream>
+#define array_size 5
+using namespace std;
+template<class T>
+
+T SearchInArray(T x[], T element) {
+    //Fill your code
+    for (int i=0; i<array_size; i++) {
+        if (x[i] == element) {
+            return element;
+        }
+    }
+    return T();  
+}
+
+int main() {
+    //Fill your code
+      int intArray[array_size];
+    float floatArray[array_size];
+    int element1, i;
+    float element2;
+
+    cout << "Enter " << array_size << " integer numbers\n";
+    for (i=0; i<array_size; i++) {
+        cin >> intArray[i];
+    }
+
+    cout << "Enter element to search:";
+    cin >> element1;
+
+    if (SearchInArray(intArray, element1)) {
+        cout << "Element " << element1 << " is found\n";
+    }
+    else {
+        cout << "Element " << element1 << " is not found\n";
+    }
+
+    cout << "\nEnter " << array_size << " float numbers\n";
+    for (i=0; i<array_size; i++) {
+        cin >> floatArray[i];
+    }
+
+    cout << "Enter element to search:";
+    cin >> element2;
+
+    if (SearchInArray(floatArray, element2)) {
+        cout << "Element " << element2 << " is found";
+    }
+    else {
+        cout << "Element " << element2 << " is not found";
+    }
+    return 0;
+}
